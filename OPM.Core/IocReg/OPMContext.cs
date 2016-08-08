@@ -8,6 +8,9 @@ namespace OPM.Core.IocReg
 {
     public class OPMContext
     {
+        public OPMContext()
+        {
 
+        }
     }
 }

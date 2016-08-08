@@ -34,6 +34,7 @@
       <HintPath>..\..\..\~0805\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -44,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\IOPMConfig.cs" />
+    <Compile Include="Config\OPMConfig.cs" />
+    <Compile Include="Config\OPMConfigManager.cs" />
+    <Compile Include="Data\IOPMDbContext.cs" />
     <Compile Include="Helpers\CommonHelper.cs" />
     <Compile Include="Helpers\IOHelper.cs" />
     <Compile Include="Helpers\SecureHelper.cs" />
@@ -52,6 +57,7 @@
     <Compile Include="Helpers\ValidateHelper.cs" />
     <Compile Include="Helpers\WebHelper.cs" />
     <Compile Include="IocReg\OPMContext.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

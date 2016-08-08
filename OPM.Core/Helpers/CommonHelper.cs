@@ -4,7 +4,7 @@ using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// 普通帮助类

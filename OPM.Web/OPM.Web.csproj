@@ -138,6 +138,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\OPMConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -223,12 +226,25 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OPM.Core\OPM.Core.csproj">
+      <Project>{0f65e9a9-9af0-43cb-9923-4b44dc6b69ab}</Project>
+      <Name>OPM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPM.Services\OPM.Services.csproj">
+      <Project>{86ecf6d2-8235-49cb-b37a-9d5f3abd3ac3}</Project>
+      <Name>OPM.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPM.Web.Framework\OPM.Web.Framework.csproj">
+      <Project>{94326079-a676-4b3a-8acd-d8029eed6827}</Project>
+      <Name>OPM.Web.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

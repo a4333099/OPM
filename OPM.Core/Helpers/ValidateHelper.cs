@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// 验证帮助类

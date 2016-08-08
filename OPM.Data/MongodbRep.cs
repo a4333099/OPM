@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OPM.Core.IocReg
+namespace OPM.Data
 {
-    public class OPMContext
+    public class MongodbRep
     {
-        public OPMContext()
-        {
-         
-        }
     }
 }

@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// 字符串帮助类

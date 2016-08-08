@@ -9,7 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// Web帮助类

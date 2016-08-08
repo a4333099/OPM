@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// 安装帮助类

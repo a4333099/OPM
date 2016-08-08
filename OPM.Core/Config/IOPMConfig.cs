@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OPM.Core.IocReg
+namespace OPM.Core.Config
 {
-    public class OPMContext
+    public interface IOPMConfig
     {
-        public OPMContext()
-        {
-         
-        }
+       
     }
 }

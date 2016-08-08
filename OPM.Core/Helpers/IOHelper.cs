@@ -6,7 +6,7 @@ using System.IO;
 using System.Web;
 using System.Xml.Serialization;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// IO帮助类

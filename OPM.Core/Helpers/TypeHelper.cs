@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LiantanjieCommon.Helper
+namespace OPM.Core.Helpers
 {
     /// <summary>
     /// 类型帮助类

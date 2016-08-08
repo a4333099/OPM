@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <OPMCONFIG>
-  <MONGODB connectionstring="127.0.0.1" dbname="OPMDB"/>
+  <ConnetionString>127.0.01</ConnetionString>
+  <DbName>OPMDB</DbName>
 </OPMCONFIG>

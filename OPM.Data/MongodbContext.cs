@@ -21,15 +21,6 @@ namespace OPM.Data
         {
             get
             {
-                //var xe = _opmconfig.XeConfig;
-                //if (xe != null)
-                //{
-                //  var mongo=  xe.Element("MONGODB");
-                //    if (mongo != null)
-                //    {
-                //        return mongo.Attribute("connectionstring").Value;
-                //    }
-                //}
                 return "";
                  
             }

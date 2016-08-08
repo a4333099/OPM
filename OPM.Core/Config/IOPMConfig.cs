@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OPM.Core.Config
 {
-    public interface IOPMConfig
-    {
-       
-    }
+   public  interface IOPMConfig
+   {
+       OPMConfig CreateConfig();
+
+        string  ConnetionString { get; set; }
+   }
 }

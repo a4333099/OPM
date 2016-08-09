@@ -37,7 +37,7 @@ namespace OPM.Data
                 var collection = db.GetCollection<T>();
 
                 // 向集合中插入对象
-                collection.Insert(type);
+                collection.Insert(value);
             }
         }
 
@@ -63,7 +63,7 @@ namespace OPM.Data
                 var collection = db.GetCollection<T>();
 
                 // 更新对象
-                collection.Update(customer, wherelambada);
+                collection.Update(value, wherelambada);
             }
         }
 

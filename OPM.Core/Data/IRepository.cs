@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OPM.Core
+namespace OPM.Core.Data
 {
     public interface IRepository<T> where T : class
     {

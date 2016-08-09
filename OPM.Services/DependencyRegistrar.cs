@@ -5,8 +5,10 @@ using System.Linq;
 using System.Web;
 using Autofac;
 using OPM.Core.Config;
+using OPM.Data;
+using OPM.Core.Data;
 
-namespace OPM.Web.Framework
+namespace OPM.Services
 {
     public class DependencyRegistrar : IDependencyRegistrar
     {
@@ -20,7 +22,8 @@ namespace OPM.Web.Framework
 
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder, OPMConfig config)
         {
-            
+            builder.RegisterGeneric(typeof(MongodbRep<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
+
         }
     }
 }

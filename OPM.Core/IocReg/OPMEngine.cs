@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 using OPM.Core.Config;
 using Autofac;
 using System.Web.Mvc;
-using Autofac.Integration.Mvc;
+
 
 namespace OPM.Core.IocReg
 {
     public class OPMEngine : IEngine
     {
 
-        private ContainerManager _containerManager;
-        public ContainerManager ContainerManager
-        {
-            get { return _containerManager; }
-        }
+        IContainer _container;
 
         public void Initialize(OPMConfig config)
         {
@@ -26,21 +22,21 @@ namespace OPM.Core.IocReg
         protected virtual void RegisterDependencies(OPMConfig config)
         {
             var builder = new ContainerBuilder();
-            var container = builder.Build();
-            this._containerManager = new ContainerManager(container);
+             _container = builder.Build();
+           
             var typeFinder = new WebAppTypeFinder();
             builder = new ContainerBuilder();
             builder.RegisterInstance(config).As<OPMConfig>().SingleInstance();
             builder.RegisterInstance(this).As<IEngine>().SingleInstance();
             builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
-            builder.Update(container);
+            builder.Update(_container);
 
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+           // DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
         }
         public T Resolve<T>() where T : class
         {
-            return ContainerManager.Resolve<T>();
+            return _container.Resolve<T>();
         }
 
         /// <summary>
@@ -50,17 +46,7 @@ namespace OPM.Core.IocReg
         /// <returns></returns>
         public object Resolve(Type type)
         {
-            return ContainerManager.Resolve(type);
-        }
-
-        /// <summary>
-        /// Resolve dependencies
-        /// </summary>
-        /// <typeparam name="T">T</typeparam>
-        /// <returns></returns>
-        public T[] ResolveAll<T>()
-        {
-            return ContainerManager.ResolveAll<T>();
+            return _container.Resolve(type);
         }
 
     }

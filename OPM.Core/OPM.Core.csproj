@@ -33,9 +33,6 @@
     <Reference Include="Autofac">
       <HintPath>..\..\..\~0805\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.Mvc">
-      <HintPath>..\..\..\~0805\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -43,7 +40,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\~0805\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,7 +59,7 @@
     <Compile Include="Helpers\ValidateHelper.cs" />
     <Compile Include="Helpers\WebHelper.cs" />
     <Compile Include="IocReg\AppDomainTypeFinder.cs" />
-    <Compile Include="IocReg\ContainerManager.cs" />
+    <Compile Include="IocReg\IDependencyRegistrar.cs" />
     <Compile Include="IocReg\IEngine.cs" />
     <Compile Include="IocReg\ITypeFinder.cs" />
     <Compile Include="IocReg\OPMContext.cs" />

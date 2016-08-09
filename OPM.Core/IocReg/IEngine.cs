@@ -12,7 +12,7 @@ namespace OPM.Core.IocReg
         /// <summary>
         /// Container manager
         /// </summary>
-        ContainerManager ContainerManager { get; }
+    
 
         /// <summary>
         /// Initialize components and plugins in the nop environment.
@@ -34,11 +34,6 @@ namespace OPM.Core.IocReg
         /// <returns></returns>
         object Resolve(Type type);
 
-        /// <summary>
-        /// Resolve dependencies
-        /// </summary>
-        /// <typeparam name="T">T</typeparam>
-        /// <returns></returns>
-        T[] ResolveAll<T>();
+     
     }
 }

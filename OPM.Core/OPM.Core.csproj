@@ -54,7 +54,6 @@
   <ItemGroup>
     <Compile Include="Config\OPMConfig.cs" />
     <Compile Include="Config\OPMConfigManager.cs" />
-    <Compile Include="Data\IOPMDbContext.cs" />
     <Compile Include="Helpers\CommonHelper.cs" />
     <Compile Include="Helpers\IOHelper.cs" />
     <Compile Include="Helpers\SecureHelper.cs" />
@@ -74,7 +73,9 @@
     <Compile Include="OPMException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

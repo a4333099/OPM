@@ -14,7 +14,8 @@ namespace OPM.Data
     {
         public MongodbRep(OPMConfig config)
         {
-                
+            _connectionString = config.ConnetionString;
+            _dbName = config.DbName;
         }
 
         private string _connectionString;

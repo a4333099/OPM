@@ -92,9 +92,9 @@ namespace OPM.Core.Helpers
                 if (cookie != null)
                     return cookie.Value;
 
-                return string.Empty;
+                return null;
             }
-            return string.Empty;
+            return null;
         }
 
         /// <summary>

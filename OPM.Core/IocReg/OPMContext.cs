@@ -51,11 +51,11 @@ namespace OPM.Core.IocReg
             }
         }
 
-        public static UserInfo CurrentUser
+        public static int Uid
         {
             get
             {
-                return null;
+                return int.Parse(WebHelper.GetCookie("uid", -1));
             }
         }
     }

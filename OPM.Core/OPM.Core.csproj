@@ -33,6 +33,12 @@
     <Reference Include="Autofac">
       <HintPath>..\..\..\~0805\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\BaiduYunDownload\Liantanjie\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\..\..\BaiduYunDownload\Liantanjie\packages\StackExchange.Redis.1.1.603\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -49,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\IOPMCache.cs" />
+    <Compile Include="Cache\RedisCache.cs" />
     <Compile Include="Config\OPMConfig.cs" />
     <Compile Include="Config\OPMConfigManager.cs" />
     <Compile Include="Helpers\CommonHelper.cs" />

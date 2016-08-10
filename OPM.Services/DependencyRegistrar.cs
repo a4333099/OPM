@@ -24,6 +24,7 @@ namespace OPM.Services
         {
             builder.RegisterGeneric(typeof(MongodbRep<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
 
+
         }
     }
 }

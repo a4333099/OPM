@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <OPMCONFIG>
-  <ConnetionString>127.0.01</ConnetionString>
+  <DBConnetionString>127.0.01</DBConnetionString>
   <DbName>OPMDB</DbName>
+  <CacheConnectionString>127.0.0.1:6379,allowadmin=true</CacheConnectionString>
 </OPMCONFIG>

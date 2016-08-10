@@ -14,9 +14,9 @@ namespace OPM.Core.Config
     public class OPMConfig 
     {
 
-        public string ConnetionString { get; set; }
+        public string DBConnetionString { get; set; }
         public string DbName { get; set; }
 
-
+        public string CacheConnectionString { get; set; }
     }
 }

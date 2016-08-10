@@ -7,6 +7,7 @@ using Autofac;
 using OPM.Core.Config;
 using OPM.Data;
 using OPM.Core.Data;
+using OPM.Core.Cache;
 
 namespace OPM.Services
 {
@@ -24,7 +25,7 @@ namespace OPM.Services
         {
             builder.RegisterGeneric(typeof(MongodbRep<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
 
-
+            builder.RegisterType<RedisCache>().As<IOPMCache>().InstancePerLifetimeScope();
         }
     }
 }

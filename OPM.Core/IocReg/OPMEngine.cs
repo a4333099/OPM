@@ -31,7 +31,18 @@ namespace OPM.Core.IocReg
             builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
             builder.Update(_container);
 
-           // DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            builder = new ContainerBuilder();
+            var drTypes = typeFinder.FindClassesOfType<IDependencyRegistrar>();
+            var drInstances = new List<IDependencyRegistrar>();
+            foreach (var drType in drTypes)
+                drInstances.Add((IDependencyRegistrar)Activator.CreateInstance(drType));
+            //sort
+            drInstances = drInstances.AsQueryable().OrderBy(t => t.Order).ToList();
+            foreach (var dependencyRegistrar in drInstances)
+                dependencyRegistrar.Register(builder, typeFinder, config);
+            builder.Update(_container);
+
+            // DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
         }
         public T Resolve<T>() where T : class

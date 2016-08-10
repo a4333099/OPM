@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Autofac;
 using System.Runtime.CompilerServices;
 using OPM.Core.Helpers;
+using OPM.Core.Domain;
 
 namespace OPM.Core.IocReg
 {
@@ -47,6 +48,14 @@ namespace OPM.Core.IocReg
             get
             {
                 return Utils.GetSidCookie() ?? Utils.SetSid();
+            }
+        }
+
+        public static UserInfo CurrentUser
+        {
+            get
+            {
+                return null;
             }
         }
     }

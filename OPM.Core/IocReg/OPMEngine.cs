@@ -15,8 +15,22 @@ namespace OPM.Core.IocReg
 
         IContainer _container;
 
+        public string EngineName
+        {
+            get
+            {
+                return _engineName;
+            }
+
+            set
+            {
+                _engineName = value;
+            }
+        }
+        string _engineName;
         public void Initialize(OPMConfig config)
         {
+            _engineName = config.EngineName;
             RegisterDependencies(config);
         }
         protected virtual void RegisterDependencies(OPMConfig config)
@@ -60,5 +74,7 @@ namespace OPM.Core.IocReg
             return _container.Resolve(type);
         }
 
+
+        
     }
 }

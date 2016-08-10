@@ -3,4 +3,5 @@
   <DBConnetionString>127.0.01</DBConnetionString>
   <DbName>OPMDB</DbName>
   <CacheConnectionString>127.0.0.1:6379,allowadmin=true</CacheConnectionString>
+  <EngineName>欧派美网上商城</EngineName>
 </OPMCONFIG>

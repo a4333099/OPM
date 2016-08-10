@@ -18,5 +18,7 @@ namespace OPM.Core.Config
         public string DbName { get; set; }
 
         public string CacheConnectionString { get; set; }
+
+        public string EngineName { get; set; }
     }
 }

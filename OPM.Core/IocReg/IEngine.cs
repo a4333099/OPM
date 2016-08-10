@@ -34,6 +34,6 @@ namespace OPM.Core.IocReg
         /// <returns></returns>
         object Resolve(Type type);
 
-     
+        string EngineName { get; set; }
     }
 }

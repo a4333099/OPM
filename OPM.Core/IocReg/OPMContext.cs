@@ -51,11 +51,15 @@ namespace OPM.Core.IocReg
             }
         }
 
-        public static int Uid
+        public static string Uid
         {
             get
             {
-                return int.Parse(WebHelper.GetCookie("uid", -1));
+                return WebHelper.GetCookie("uid", -1);
+            }
+            set
+            {
+                WebHelper.SetCookie("uid",value);
             }
         }
     }

@@ -9,7 +9,7 @@ namespace OPM.Core.Domain
     public class UserInfo
     {
 
-        public int UId { get; set; }
+        public string UId { get; set; }
         /// <summary>
         ///用户名称
         /// </summary>

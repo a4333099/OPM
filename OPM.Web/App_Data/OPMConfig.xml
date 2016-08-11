@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<OPMCONFIG>
+<OPMConfig>
   <DBConnetionString>127.0.01</DBConnetionString>
   <DbName>OPMDB</DbName>
   <CacheConnectionString>127.0.0.1:6379,allowadmin=true</CacheConnectionString>
-  <EngineName>欧派美网上商城</EngineName>
-</OPMCONFIG>
+  <EngineName>OPM网上商城</EngineName>
+</OPMConfig>

@@ -14,11 +14,8 @@ namespace OPM.Core.IocReg
     public class OPMContext
     {
 
-
-
-
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static IEngine EngineInitialize(bool forceRecreate)
+        public  IEngine EngineInitialize(bool forceRecreate)
         {
             if (Singleton<IEngine>.Instance == null || forceRecreate)
             {
@@ -31,7 +28,7 @@ namespace OPM.Core.IocReg
         }
 
 
-        public static IEngine CurrentEngine
+        public  IEngine CurrentEngine
         {
             get
             {
@@ -43,7 +40,7 @@ namespace OPM.Core.IocReg
             }
         }
 
-        public static string Sid
+        public  string Sid
         {
             get
             {
@@ -51,7 +48,7 @@ namespace OPM.Core.IocReg
             }
         }
 
-        public static string Uid
+        public  string Uid
         {
             get
             {

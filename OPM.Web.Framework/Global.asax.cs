@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OPM.Core.IocReg;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,11 @@ namespace OPM.Web.Framework
     {
         protected void Application_Start()
         {
+
+
+            Singleton<OPMContext>.Instance = new OPMContext();
+            Singleton<OPMContext>.Instance.EngineInitialize(false);
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

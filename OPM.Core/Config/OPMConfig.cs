@@ -10,15 +10,12 @@ using OPM.Core.Helpers;
 
 namespace OPM.Core.Config
 {
-    [Serializable]
+   [Serializable]
     public class OPMConfig 
     {
-
         public string DBConnetionString { get; set; }
         public string DbName { get; set; }
-
         public string CacheConnectionString { get; set; }
-
         public string EngineName { get; set; }
     }
 }

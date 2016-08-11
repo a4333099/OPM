@@ -79,6 +79,9 @@
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="OPMException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomsMethod\IOPMRandom.cs" />
+    <Compile Include="RandomsMethod\RandomImage.cs" />
+    <Compile Include="RandomsMethod\OPMRandom.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

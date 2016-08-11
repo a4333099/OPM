@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OPM.Core.Cache
 {
-    public interface IOPMCache:IDisposable
+    public interface IOPMSessionCache:IDisposable
     {
         object Get<T>(string sid, string key);
 
@@ -16,7 +16,7 @@ namespace OPM.Core.Cache
         /// <param name="key">key</param>
         /// <param name="data">Data</param>
         /// <param name="cacheTime">Cache time</param>
-        void Set(string sid, string key, object data, int cacheTime);
+        void Set(string sid, string key, object data, int cacheTime=15);
 
         /// <summary>
         /// Gets a value indicating whether the value associated with the specified key is cached

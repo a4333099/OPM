@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OPM.Core.Config;
 using Autofac;
 using System.Web.Mvc;
+using OPM.Core.RandomsMethod;
 
 
 namespace OPM.Core.IocReg
@@ -15,22 +16,12 @@ namespace OPM.Core.IocReg
 
         IContainer _container;
 
-        public string EngineName
-        {
-            get
-            {
-                return _engineName;
-            }
-
-            set
-            {
-                _engineName = value;
-            }
-        }
-        string _engineName;
+        public List<String> PromptLst { get; set; }
+        public OPMConfig OPMConfig { get; set; }
         public void Initialize(OPMConfig config)
         {
-            _engineName = config.EngineName;
+            OPMConfig = config;
+            PromptLst = new List<string>();
             RegisterDependencies(config);
         }
         protected virtual void RegisterDependencies(OPMConfig config)
@@ -43,6 +34,7 @@ namespace OPM.Core.IocReg
             builder.RegisterInstance(config).As<OPMConfig>().SingleInstance();
             builder.RegisterInstance(this).As<IEngine>().SingleInstance();
             builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
+            builder.RegisterType<OPMRandom>().As<IOPMRandom>().SingleInstance();
             builder.Update(_container);
 
             builder = new ContainerBuilder();

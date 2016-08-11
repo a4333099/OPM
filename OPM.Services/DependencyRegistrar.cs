@@ -8,6 +8,8 @@ using OPM.Core.Config;
 using OPM.Data;
 using OPM.Core.Data;
 using OPM.Core.Cache;
+using OPM.Core.RandomsMethod;
+using OPM.Services.Users;
 
 namespace OPM.Services
 {
@@ -25,7 +27,11 @@ namespace OPM.Services
         {
             builder.RegisterGeneric(typeof(MongodbRep<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
 
-            builder.RegisterType<RedisCache>().As<IOPMCache>().InstancePerLifetimeScope();
+            builder.RegisterType<RedisCache>().As<IOPMSessionCache>().InstancePerLifetimeScope();
+
+            builder.RegisterType<UserInfoSer>().As<IUserInfoSer>().InstancePerLifetimeScope();
+
+            builder.RegisterType<OPMRandom>().As<IOPMRandom>().InstancePerLifetimeScope();
         }
     }
 }

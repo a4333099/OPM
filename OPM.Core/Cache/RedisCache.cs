@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace OPM.Core.Cache
 {
-    public class RedisCache : IOPMCache
+    public class RedisCache : IOPMSessionCache
     {
         public RedisCache(OPMConfig config)
         {
@@ -23,12 +23,13 @@ namespace OPM.Core.Cache
         ConnectionMultiplexer _conn;
         IDatabase _db;
 
-        /// <summary>
-        /// Gets or sets the value associated with the specified key.
-        /// </summary>
-        /// <typeparam name="T">Type</typeparam>
-        /// <param name="key">The key of the value to get.</param>
-        /// <returns>The value associated with the specified key.</returns>
+     /// <summary>
+     /// 
+     /// </summary>
+     /// <typeparam name="T"></typeparam>
+     /// <param name="sid"></param>
+     /// <param name="key"></param>
+     /// <returns></returns>
         public virtual object Get<T>(string sid, string key)
         {
             if (typeof(T).IsPrimitive || typeof(T).Name == "String")
@@ -42,12 +43,13 @@ namespace OPM.Core.Cache
 
         }
 
-        /// <summary>
-        /// Adds the specified key and object to the cache.
-        /// </summary>
-        /// <param name="key">key</param>
-        /// <param name="data">Data</param>
-        /// <param name="cacheTime">Cache time</param>
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="sid"></param>
+       /// <param name="key"></param>
+       /// <param name="data"></param>
+       /// <param name="cacheTime"></param>
         public virtual void Set(string sid, string key, object data, int cacheTime = 15)
         {
             SetItem(sid, key, data, TimeSpan.FromMinutes(cacheTime));

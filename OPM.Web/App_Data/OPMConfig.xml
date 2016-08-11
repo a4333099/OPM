@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <OPMConfig>
-  <DBConnetionString>127.0.01</DBConnetionString>
+  <DBConnetionString>Server=127.0.0.1</DBConnetionString>
   <DbName>OPMDB</DbName>
   <CacheConnectionString>127.0.0.1:6379,allowadmin=true</CacheConnectionString>
   <EngineName>OPM网上商城</EngineName>
+  <EncryptKey>liantanjiekey</EncryptKey>
+  <Randomlib>123456789abcdefghjkmnpqrstuvwxy</Randomlib>
 </OPMConfig>

@@ -19,8 +19,8 @@ namespace OPM.Data
             _dbName = config.DbName;
         }
 
-        private string _connectionString;
-        private string _dbName;
+        private readonly string _connectionString;
+        private readonly string _dbName;
         public  void Insert(T value)
         {
             // type.Id = Guid.NewGuid().ToString("N");

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace OPM.Core.IocReg
 {
-  public   interface IEngine
+    public interface IEngine
     {
         /// <summary>
         /// Container manager
         /// </summary>
-    
+
 
         /// <summary>
         /// Initialize components and plugins in the nop environment.
@@ -33,7 +33,8 @@ namespace OPM.Core.IocReg
         /// <param name="type">Type</param>
         /// <returns></returns>
         object Resolve(Type type);
+        List<String> PromptLst { get; set; }
 
-        string EngineName { get; set; }
+        OPMConfig OPMConfig { get; set; }
     }
 }

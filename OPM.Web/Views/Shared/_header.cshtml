@@ -1,0 +1,45 @@
+﻿<div class="User-header">
+    <div class="col-xs-2"><a href="/">@OPMContext.CurrentEngine.OPMConfig.EngineName</a></div>
+    @if (int.Parse(OPMContext.Uid)> 0)
+    {
+        <div class="col-xs-4 col-xs-offset-6">
+            <a>@OPMContext.Uid</a><span> </span>
+            <a>我的订单</a><span> </span>
+            <a>联系客服</a><span> </span>
+            <a href="@Url.Action("Logout", "Account", new RouteValueDictionary() { { "ReturnUrl", HttpContext.Current.Request.Url } })">退出</a>
+        </div>
+
+        
+    }
+    else
+    {
+        <div class="col-xs-4 col-xs-offset-6">
+            <a href="@Url.Action("Login", "Account", new RouteValueDictionary() { { "ReturnUrl", HttpContext.Current.Request.Url } })">登录</a>
+            <span></span>
+           <a href="@Url.Action("Register", "Account", new RouteValueDictionary() { { "ReturnUrl", HttpContext.Current.Request.Url } })">注册</a>
+        </div>
+
+    }
+
+</div>
+<div class="container">
+    <div class="top-header">
+        <div class="logo">
+            <a href="/">
+                <img src="~/images/logo.png" title="barndlogo" /></a>
+        </div>
+        <div class="top-header-search-box">
+            <form>
+                <input type="text" placeholder="Search" required maxlength="22">
+                <input type="submit" value=" ">
+            </form>
+        </div>
+        <div id="cartbox">
+            <h2><span> </span>我的购物车</h2>
+            
+        </div>
+        <!---top-header-search-box--->
+
+        <div class="clearfix"></div>
+    </div>
+</div>

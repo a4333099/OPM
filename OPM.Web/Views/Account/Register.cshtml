@@ -1,0 +1,47 @@
+﻿@{ Layout = null;
+}
+@model OPM.Web.Models.RegModel
+<head>
+    <title>注册</title>
+    <script src="~/js/jquery-1.7.1.js" type="text/javascript"></script>
+
+</head>
+<body>
+    @using (@Html.BeginForm(new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.Hidden("ReturnUrl", Model.ReturnUrl)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Account, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Account, new { @class = "form-control", placeholder = "输入账号" })
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "sr-only" })
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "输入密码" })
+
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "sr-only" })
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "确认密码" })
+
+        </div>
+        if (Model.IsVerifyCode)
+        {
+        <div class="form-group">
+            <input type="text" name="verifyCode" autocomplete="off" class="YZM text left" /><img id="verifyImage" style="cursor: pointer" title="点击刷新验证码" onclick="this.src='/tool/verifyimage?time=' + new Date()" src="/tool/verifyimage" height="34" class="left" /><div class="clear"></div>
+        </div>
+        }
+        if (OPMContext.CurrentEngine.PromptLst.Count>0)
+        {
+        <div class="form-group">
+            @Html.Label(OPMContext.CurrentEngine.PromptLst[0])
+        </div>
+        }
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="注册" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</body>

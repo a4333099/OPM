@@ -31,13 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\..\~0805\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <HintPath>F:\xunlei\Autofac.3.0.2\Autofac.3.0.2\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB">
+      <HintPath>..\Libs\MongoDB.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\BaiduYunDownload\Liantanjie\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Liantanjie\Liantanjie\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="StackExchange.Redis">
-      <HintPath>..\..\..\BaiduYunDownload\Liantanjie\packages\StackExchange.Redis.1.1.603\lib\net45\StackExchange.Redis.dll</HintPath>
+      <HintPath>..\..\Liantanjie\packages\StackExchange.Redis.1.1.603\lib\net45\StackExchange.Redis.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

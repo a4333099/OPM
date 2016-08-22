@@ -1,0 +1,16 @@
+G:\MyAsset\OPM\OPM.Data\bin\Debug\OPM.Data.dll
+G:\MyAsset\OPM\OPM.Data\bin\Debug\OPM.Data.pdb
+G:\MyAsset\OPM\OPM.Data\bin\Debug\OPM.Core.dll
+G:\MyAsset\OPM\OPM.Data\bin\Debug\OPM.Core.pdb
+G:\MyAsset\OPM\OPM.Data\obj\Debug\OPM.Data.csprojResolveAssemblyReference.cache
+G:\MyAsset\OPM\OPM.Data\obj\Debug\OPM.Data.dll
+G:\MyAsset\OPM\OPM.Data\obj\Debug\OPM.Data.pdb
+G:\MyAsset\OPM\OPM.Data\bin\Debug\MongoDB.dll
+G:\MyAsset\OPM\OPM.Data\bin\Debug\StackExchange.Redis.dll
+G:\MyAsset\OPM\OPM.Data\bin\Debug\Autofac.dll
+G:\MyAsset\OPM\OPM.Data\bin\Debug\Newtonsoft.Json.dll
+G:\MyAsset\OPM\OPM.Data\bin\Debug\StackExchange.Redis.pdb
+G:\MyAsset\OPM\OPM.Data\bin\Debug\StackExchange.Redis.xml
+G:\MyAsset\OPM\OPM.Data\bin\Debug\Autofac.pdb
+G:\MyAsset\OPM\OPM.Data\bin\Debug\Autofac.xml
+G:\MyAsset\OPM\OPM.Data\bin\Debug\Newtonsoft.Json.xml
